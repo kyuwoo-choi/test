@@ -1,0 +1,32 @@
+1
+1-1. SQL> printjson(db.adminCommand('listDatabases'));
+1-2. SQL > printjson(db.getsiblingDB('admin').db.runCommand('listCollections'));  또는
+     SQL > db=db.getSiblingDB('admin');printjson(db.getCollectionNames());
+
+2
+2-1. SQL > db=db.getSiblingDB('admin');printjson(db.getUsers());
+
+3
+N/A
+
+4
+4-1 SQL > printjson(db.getSiblingDB('admin').db.runCommand( { usersInfo: 1} ));
+4-2 SQL > printjson(db.runCommand({dbHash: 1}));
+4-3 SQL > db=db.getSiblingDB('admin');printjson(db.system.users.count());
+
+5
+N/A
+
+6
+N/A
+
+7
+N/A
+
+8
+8-1. SQL > printjson(db.serverBuildInfo());
+
+9
+9-1. SQL > printjson(db.adminCommand({getParameter: 1, logLevel: 1}));
+9-2. SQL > printjson(db.getLogComponents());
+
